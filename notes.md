@@ -5,3 +5,4 @@
 
 1-create appbar component and add buttons
 2-create card components with image, product name, rating, price
+3-build product screen as product detail page

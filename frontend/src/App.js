@@ -1,14 +1,20 @@
-import ButtonAppBar from './components/Appbar'
-import CenteredGrid from './components/ProductList'
+import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import NavigationBar from "./components/NavigationBar";
+import ProductScreen from "./screens/ProductScreen";
+import HomeScreen from "./screens/HomeScreen";
+import CssBaseline from "@material-ui/core/CssBaseline";
 
 function App() {
-
   return (
     <>
-    <ButtonAppBar/>
-    <CenteredGrid/>
+      <BrowserRouter>
+        <CssBaseline />
+        <NavigationBar />
+        <Route exact path="/" component={HomeScreen}></Route>
+        <Route path="/product/:id" component={ProductScreen}></Route>
+      </BrowserRouter>
     </>
-
   );
 }
 
